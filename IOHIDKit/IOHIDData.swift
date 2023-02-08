@@ -22,30 +22,18 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-#import "IOHIDData.h"
+import Foundation
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface IOHIDData()
-
-@property( nonatomic, readwrite, strong ) NSString * name;
-@property( nonatomic, readwrite, assign ) double     value;
-
-@end
-
-NS_ASSUME_NONNULL_END
-
-@implementation IOHIDData
-
-- ( instancetype )initWithName: ( NSString * )name value: ( double )value
+@objc
+public class IOHIDData: NSObject
 {
-    if( ( self = [ super init ] ) )
+    @objc public private( set ) dynamic var name:  String
+    @objc public private( set ) dynamic var value: Double
+
+    @objc
+    public init( name: String, value: Double )
     {
-        self.name  = name;
-        self.value = value;
+        self.name  = name
+        self.value = value
     }
-
-    return self;
 }
-
-@end
