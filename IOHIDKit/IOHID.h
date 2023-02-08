@@ -36,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 - ( NSArray< IOHIDData * > * )readTemperatureSensors;
 - ( NSArray< IOHIDData * > * )readVoltageSensors;
 - ( NSArray< IOHIDData * > * )readCurrentSensors;
+- ( NSArray< IOHIDData * > * )readAmbiantLightSensors;
 
 @end
 

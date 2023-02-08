@@ -124,8 +124,9 @@ typedef NS_ENUM( int64_t, IOHIDEvent )
 
 typedef NS_ENUM( int64_t, IOHIDEventField )
 {
-    IOHIDEventFieldTemperatureLevel = IOHIDEventFieldBase( IOHIDEventTypeTemperature ),
-    IOHIDEventFieldPowerMeasurement = IOHIDEventFieldBase( IOHIDEventTypePower )
+    IOHIDEventFieldTemperatureLevel        = IOHIDEventFieldBase( IOHIDEventTypeTemperature ),
+    IOHIDEventFieldPowerMeasurement        = IOHIDEventFieldBase( IOHIDEventTypePower ),
+    IOHIDEventFieldAmbientLightMeasurement = IOHIDEventFieldBase( IOHIDEventTypeAmbientLightSensor )
 };
 
 extern IOHIDEventSystemClientRef IOHIDEventSystemClientCreate( CFAllocatorRef );

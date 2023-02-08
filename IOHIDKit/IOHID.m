@@ -89,6 +89,11 @@ NS_ASSUME_NONNULL_END
     return [ self read: IOHIDPageAppleVendorPowerSensor usage: IOHIDUsageAppleVendorPowerSensorCurrent eventType: IOHIDEventTypePower eventField: IOHIDEventFieldPowerMeasurement ];
 }
 
+- ( NSArray< IOHIDData * > * )readAmbiantLightSensors
+{
+    return [ self read: IOHIDPageAppleVendor usage: IOHIDUsageAppleVendorAmbientLightSensor eventType: IOHIDEventTypeAmbientLightSensor eventField: IOHIDEventFieldAmbientLightMeasurement ];
+}
+
 - ( NSArray< IOHIDData * > * )read: ( long long )page usage: ( int64_t )usage eventType: ( int64_t )eventType eventField: ( int64_t )eventField
 {
     if( self.client == nil )
@@ -112,6 +117,16 @@ NS_ASSUME_NONNULL_END
         IOHIDServiceClientRef service = ( __bridge IOHIDServiceClientRef )o;
         NSString            * name    = CFBridgingRelease( IOHIDServiceClientCopyProperty( service, CFSTR( "Product" ) ) );
         CFTypeRef             event   = IOHIDServiceClientCopyEvent( service, eventType, 0, 0 );
+
+        if( name == nil )
+        {
+            NSNumber * locationID = CFBridgingRelease( IOHIDServiceClientCopyProperty( service, CFSTR( "LocationID" ) ) );
+
+            if( [ locationID isKindOfClass: [ NSNumber class ] ] )
+            {
+                name = [ NSString stringWithFormat: @"Unknown-%llX-%llX-%llX", page, usage, locationID.unsignedLongLongValue ];
+            }
+        }
 
         if( name != nil && event != nil )
         {
