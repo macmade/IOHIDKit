@@ -17,6 +17,9 @@
 /* Begin PBXFileReference section */
 		058B8E2E2994317C00263FE9 /* IOHIDData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOHIDData.swift; sourceTree = "<group>"; };
 		058B8E30299431F900263FE9 /* IOHIDKit.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = IOHIDKit.modulemap; sourceTree = "<group>"; };
+		058B8E312994329F00263FE9 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		058B8E322994329F00263FE9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		058B8E332994329F00263FE9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		05BD7282299275AB00CF4FD7 /* IOHIDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IOHIDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BD7285299275AB00CF4FD7 /* IOHIDKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOHIDKit.h; sourceTree = "<group>"; };
 		05BD72B429928E0A00CF4FD7 /* IOHID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOHID.m; sourceTree = "<group>"; };
@@ -84,6 +87,9 @@
 		05BD7278299275AB00CF4FD7 = {
 			isa = PBXGroup;
 			children = (
+				058B8E312994329F00263FE9 /* CODE_OF_CONDUCT.md */,
+				058B8E332994329F00263FE9 /* LICENSE */,
+				058B8E322994329F00263FE9 /* README.md */,
 				05BD72BE299290A000CF4FD7 /* xcconfig */,
 				05BD7284299275AB00CF4FD7 /* IOHIDKit */,
 				05BD7283299275AB00CF4FD7 /* Products */,
